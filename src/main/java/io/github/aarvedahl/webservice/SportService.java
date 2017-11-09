@@ -25,12 +25,16 @@ public class SportService {
     }
 
     @GET
-    @Path("/listnumber/{number}")
+    @Path("/sport/{number}")
     @Produces(MediaType.APPLICATION_XML)
-    public List<Match> getNumberMatches() {
-        // Return a specific number of matches
-        return matches;
+    public Match getOneSport(@PathParam("number") String number) {
+        int sport = Integer.parseInt(number);
+        if(sport > matches.size() -1) {
+            return matches.get(0);
+        }
+        return matches.get(sport);
     }
+
 
     private List<Match> initMatches() {
         List<Match> sports = new ArrayList<>();
