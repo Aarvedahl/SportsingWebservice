@@ -21,7 +21,14 @@ public class SportService {
     @Path("/list")
     @Produces(MediaType.APPLICATION_XML)
     public List<Match> getMatches() {
+        return matches;
+    }
 
+    @GET
+    @Path("/listnumber/{number}")
+    @Produces(MediaType.APPLICATION_XML)
+    public List<Match> getNumberMatches() {
+        // Return a specific number of matches
         return matches;
     }
 
