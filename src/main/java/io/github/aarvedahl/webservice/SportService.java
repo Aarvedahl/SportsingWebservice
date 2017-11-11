@@ -38,9 +38,13 @@ public class SportService {
 
     private List<Match> initMatches() {
         List<Match> sports = new ArrayList<>();
-        Match match = new Match("Ice Hockey");
-        match.registerContender("Alex", 3, 4);
-        sports.add(match);
+        Match ice_hockey = new Match("Ice Hockey");
+        ice_hockey.registerContender("Alex", 3, 4);
+        Match soccer = new Match("Soccer");
+        soccer.registerContender("Sweden", 1, 3);
+        soccer.registerContender("Italy", 0, 2);
+        sports.add(soccer);
+        sports.add(ice_hockey);
         return sports;
     }
 }
