@@ -12,13 +12,5 @@
 <!-- För att AJAX ska funka måste JSF-prylar ligga i en <form>. -->
 <h:body><h:form>
 
-	<p:dataList value="#{sportsBean.contenders}" var="contender" type="ordered">
-		<f:facet name="header">
-			Matches
-		</f:facet>
-		#{contender.place}, #{contender.name}, #{contender.score}
-	</p:dataList>
-
-
 </h:form></h:body>
 </html>

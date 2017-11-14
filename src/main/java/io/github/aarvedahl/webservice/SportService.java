@@ -1,6 +1,9 @@
 package io.github.aarvedahl.webservice;
 
 import com.sportsing.api.Match;
+import io.github.aarvedahl.ejb.SportEJB;
+
+import javax.ejb.EJB;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import java.util.ArrayList;
@@ -8,6 +11,8 @@ import java.util.List;
 
 @Path("/sportservice")
 public class SportService {
+
+    @EJB private SportEJB sportEJB;
 
     private List<Match>matches = initMatches();
 
